@@ -1,0 +1,23 @@
+# CodeVita Count pairs problem.
+
+list1 = []
+list2 = []
+
+N,K = map(int, input("Enter the value of N and K by providing space:").split(' '))
+
+for i in range(0, N):
+    list1.append(int(input("Enter the element: ")))
+    
+# print(list1)
+    
+for i in range(0, len(list1)):
+    a = list1[i] - K
+    b = list1[i] + K
+    for j in range(0, len(list1)):
+        if list1[j] != list1[i]:
+            if list1[j] >= a and list1[j] <= b:
+                list2.append(list1[i])
+                break
+                
+                
+print(len(list2))
